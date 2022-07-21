@@ -47,7 +47,7 @@ class RestourantController extends Controller
             // dd($request->all()); die();
            $restourant->fill($request->all());
            $restourant->save();
-           return redirect()->route('restourant.index');
+           return redirect()->route('restourants.index');
     
         }
     }
@@ -90,7 +90,7 @@ class RestourantController extends Controller
     ]);
         $restourant->fill($request->all());
         $restourant->save();
-        return redirect()->route('restourant.index');
+        return redirect()->route('restourants.index');
  
     }
 
@@ -106,7 +106,7 @@ class RestourantController extends Controller
         //     return back()->withErrors(['error' => ['Can\'t delete restourant with dishes assigned, please remove dishes first!']]);
         // }
         $restourant->delete();
-        return redirect()->route('restourant.index');
+        return redirect()->route('restourants.index');
 
     }
 }

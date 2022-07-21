@@ -51,7 +51,7 @@ class ReviewController extends Controller
             // dd($request->all()); die();
            $review->fill($request->all());
            $review->save();
-           return redirect()->route('dish.index');
+           return redirect()->route('dishes.index');
     
         }
     }
@@ -107,17 +107,8 @@ class ReviewController extends Controller
     public function destroy(Review $review)
     {
         $review->delete();
-        return redirect()->route('restourant.index');
+        return redirect()->route('restourants.index');
 
     }
-    public function averageRating(){
-       $avgRating = Review::get();
-       return $avgRating;
-        
-        // ->where('dish_id' == 'id');
-       
-        
-
-
-    }
+   
 }

@@ -14,9 +14,12 @@ class Dish extends Model
     public function reviews(){
         return $this->hasMany(Review::class);
     }
+    protected $with = ['restourant'];
+ 
     public function restourant(){
        return $this->belongsTo(Restourant::class);
     }
+
     
    
 }

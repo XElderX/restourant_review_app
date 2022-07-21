@@ -10,7 +10,12 @@ class Review extends Model
     use HasFactory;
     public $fillable = ['dish_id', 'author', 'comment', 'rate'];
 
+
+    protected $with = ['dish'];
+
     public function dish(){
         return $this->belongsTo(Dish::class);
     }
+
+    
 }

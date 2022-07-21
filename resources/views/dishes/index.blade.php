@@ -18,21 +18,30 @@
         <tr>
             <td>{{ $dish->dish_name }}</td>
             <td>{{ $dish->restourant->r_name }}</td>
-            <td>{{ $dish->price }}</td>
+            <td>{{ round($dish->price, 2) }}</td>
 
             
             <td><img src="{{ $dish->foto_url }}" alt="dish_img" style="width:200px;height:150px;"></td>
-            <td>Average: {{round(($dish->reviews->sum('rate')) / ($dish->reviews->count('rate')), 2) }}
-            {{-- <td>{{ dd($dish->reviews->sum('rate')/count('rate')) }}</td> --}}
+            <td>Average: 
+
+                @if (($dish->reviews->count('rate')!==0))
+                {{round(($dish->reviews->sum('rate')) / ($dish->reviews->count('rate')), 2) }}
+                {{-- <td>{{ dd($dish->reviews->sum('rate')/count('rate')) }}</td> --}}
+                @else
+
+                <span>no reviews yet</span>
+                    
+                @endif
+  
                 <p style="font-size: 10px">reviews count: 
                     {{ count($dish->reviews) }} 
-                    | <a href="{{ route('dish.show', $dish['id']) }}">View dish reviews it</a></p>
+                    | <a href="{{ route('dishes.show', $dish['id']) }}">View dish reviews it</a></p>
             
             
             </td>
             <td>
-                <form action={{ route('dish.destroy', $dish->id) }} method="POST">
-                    <a class="btn btn-success" href={{ route('dish.edit', $dish->id) }}>Edit</a>
+                <form action={{ route('dishes.destroy', $dish->id) }} method="POST">
+                    <a class="btn btn-success" href={{ route('dishes.edit', $dish->id) }}>Edit</a>
                     {{-- <a class="btn btn-success" href={{ route('dish.edit', $dish->id) }}>Edit</a> --}}
                     @csrf @method('delete')
                     <input type="submit" class="btn btn-danger" value="Delete"/>
@@ -42,7 +51,7 @@
         @endforeach
     </table>
     <div>
-        <a href="{{ route('dish.create') }}" class="btn btn-success">Add</a>
+        <a href="{{ route('dishes.create') }}" class="btn btn-success">Add</a>
     </div>
 </div>
 @endsection

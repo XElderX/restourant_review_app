@@ -7,7 +7,7 @@
            <div class="card">
                <div class="card-header">Create a restourant:</div>
                <div class="card-body">
-                   <form action="{{ route('restourant.store') }}" method="POST">
+                   <form action="{{ route('restourants.store') }}" method="POST">
                        @csrf
                        <div class="form-group">
                            <label>Title: </label>

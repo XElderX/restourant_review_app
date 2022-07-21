@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Edit Dish info</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('dish.update', $dish->id) }}">
+                    <form method="POST" action="{{ route('dishes.update', $dish->id) }}">
                         @csrf @method("PUT")
                         <div class="form-group">
                             <label for="">Dish Title: </label>

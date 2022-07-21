@@ -7,7 +7,7 @@
            <div class="card">
                <div class="card-header">Create a new dish:</div>
                <div class="card-body">
-                   <form action="{{ route('dish.store') }}" method="POST">
+                   <form action="{{ route('dishes.store') }}" method="POST">
                        @csrf
                        <div class="form-group">
                            <label>Title: </label>

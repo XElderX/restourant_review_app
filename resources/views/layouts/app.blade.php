@@ -40,10 +40,10 @@
                                 <ul class="navbar-nav mr-auto">
                                     {{-- @auth --}}
                                     <li class="nav-item">
-                                        <a href="{{ route('restourant.index') }}" class="nav-link">Restourant List</a>
+                                        <a href="{{ route('restourants.index') }}" class="nav-link">Restourant List</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('dish.index') }}" class="nav-link">Dishes List</a>
+                                        <a href="{{ route('dishes.index') }}" class="nav-link">Dishes List</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ route('reviews.index') }}" class="nav-link">Reviews</a>

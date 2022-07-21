@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('restourant', App\Http\Controllers\RestourantController::class);
-Route::resource('dish', App\Http\Controllers\DishController::class);
+Route::resource('restourants', App\Http\Controllers\RestourantController::class);
+Route::resource('dishes', App\Http\Controllers\DishController::class);
 Route::resource('reviews', App\Http\Controllers\ReviewController::class);
 
 

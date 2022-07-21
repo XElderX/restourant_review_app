@@ -54,7 +54,7 @@ class DishController extends Controller
             // dd($request->all()); die();
            $dish->fill($request->all());
            $dish->save();
-           return redirect()->route('dish.index');
+           return redirect()->route('dishes.index');
     
         }
     }
@@ -104,7 +104,7 @@ class DishController extends Controller
       
            $dish->fill($request->all());
            $dish->save();
-           return redirect()->route('dish.index');
+           return redirect()->route('dishes.index');
     
         }
 
@@ -127,14 +127,14 @@ class DishController extends Controller
     public function destroy(Dish $dish)
     {
         $dish->delete();
-        return redirect()->route('dish.index');
+        return redirect()->route('dishes.index');
     }
-    public function averageRating(){
-        $avgRating =DB::table('reviews');
-        // ->where('dish_id' == 'id');
-        dd($avgRating);
+    // public function averageRating(){
+    //     $avgRating =DB::table('reviews');
+    //     // ->where('dish_id' == 'id');
+    //     dd($avgRating);
         
 
 
     }
-}
+
