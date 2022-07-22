@@ -73,6 +73,6 @@ This app was developed with Laravel PHP framework for backend part. And Javescri
 
 
 <li>Congratulation you have sat up this project API</li>
-<li>Now go to set up frontend part: "https://github.com/XElderX/restaurant_review_app_ReactPart"</li>
+<li>Now go to set up frontend part: "https://github.com/XElderX/restaurant_review_app_ReactPart/"</li>
 
 </ol>
