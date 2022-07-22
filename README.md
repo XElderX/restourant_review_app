@@ -70,9 +70,7 @@ This app was developed with Laravel PHP framework for backend part. And Javescri
 <li>Because this app have implemented JWT auth you have to generate into .env file secret key for token encyption.Simply type into command line <code>php artisan jwt:secret</code></li>
 <li>run migrations and seeders by typing those command line<code>php artisan migrate</code> and <code>php artisan db:seed</code></li>
 <li>run this API by typing<code>php artisan:serve<code></li>
-
-
 <li>Congratulation you have sat up this project API</li>
-<li>Now go to set up frontend part: "https://github.com/XElderX/restaurant_review_app_ReactPart/"</li>
+<li>Now go to set up frontend part: "https://github.com/XElderX/restaurant_review_app_ReactPart/" </li>
 
 </ol>
