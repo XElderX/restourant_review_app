@@ -50,27 +50,18 @@ This app was developed with Laravel PHP framework for backend part. And Javescri
 ### Settin up the project.
 <ol>
 <li>Once you have done steps above. Time to set up and run the API</li>
-
 <li><b>If you do not have have composer yet</b>On bottom terminal container enter those command lines: composer instaliation download <code>php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"</code> enter, then validate installer by typing this command <code>php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"</code> and finnaly, this line <code> php composer-setup.php</code></li>
 <img src="https://user-images.githubusercontent.com/99712528/177182300-e917e13a-08d3-4e3e-9a22-540692d16d0b.png" alt="Composer download">
 <li><li>In terminal container enter command line to install required dependences: <code>composer update</code></li>
-
-
-
-
 <li>Open <code> MySQL Workbench </code> Create MySQL Connection (if it's your first time) set username and password(by default just leave username as root and not set any password); <img src="https://user-images.githubusercontent.com/99712528/174490079-1d58c653-ad9d-4e5a-88f7-2f24aff64697.png" alt="newSQlConn">   </li>
 <li>Press <code> Create a new SQL tab</code> and create new database<code>CREATE DATABASE restourant_review</code> and select it <code>use restourant_review;</code></li>
-
-
 <li>go to project directory and open .env.example file. find line: <i>DB_DATABASE=laravel</i> change to <code>DB_DATABASE=restourant_review</code>  </li>
 <li>make .env file by copying .env.example content with command line <code>cp .env.example .env</code></li>
-
 <li>For next step you have to generate app key by firing command: <code>php artisan key:generate</code></li>
-
 <li>Because this app have implemented JWT auth you have to generate into .env file secret key for token encyption.Simply type into command line <code>php artisan jwt:secret</code></li>
 <li>run migrations and seeders by typing those command line<code>php artisan migrate</code> and <code>php artisan db:seed</code></li>
 <li>run this API by typing<code>php artisan:serve<code></li>
 <li>Congratulation you have sat up this project API</li>
-<li>Now go to set up frontend part: "https://github.com/XElderX/restaurant_review_app_ReactPart/" </li>
+<li>Now go to set up frontend part: https://github.com/XElderX/restaurant_review_app_ReactPart/ </li>
 
 </ol>
