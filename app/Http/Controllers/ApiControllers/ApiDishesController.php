@@ -54,6 +54,7 @@ class ApiDishesController extends Controller
             $dish->dish_name = $data['dish_name'];
             $dish->price = $data['price'];
             $dish->restourant_id = $data['restourant_id'];
+            $dish->foto_url = $data['foto_url'];
             return ($dish->save() !== 1) ? 
                 response()->json(['success' => 'success'], 201) : 
                 response()->json(['error' => 'saving to database was not successful'], 500)  ;

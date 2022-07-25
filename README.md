@@ -65,3 +65,7 @@ This app was developed with Laravel PHP framework for backend part. And Javescri
 <li>Now go to set up frontend part: https://github.com/XElderX/restaurant_review_app_ReactPart/ </li>
 
 </ol>
+
+## Contact
+
+<span><strong>Project developed by: </strong> Dalius Kriaučiūnas <a href="https://www.linkedin.com/in/dalius-kriauciunas/">Link to Linked In </a></span>

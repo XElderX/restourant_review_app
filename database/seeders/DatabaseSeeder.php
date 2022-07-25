@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(global_admin_creation::class);
+        $this->call(restourants_creation::class);
+        $this->call(dishes_creation::class);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
